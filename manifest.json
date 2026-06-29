@@ -1,8 +1,38 @@
 {
   "name": "Rare OS",
   "short_name": "Rare",
+  "description": "Personal Operating System Dashboard - Manage projects, tasks, and devices",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#111111",
-  "start_url": "./"
+  "orientation": "portrait",
+  "background_color": "#f5f5f7",
+  "theme_color": "#007aff",
+  "categories": ["productivity", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }

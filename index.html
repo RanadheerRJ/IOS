@@ -1,64 +1,180 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rare OS</title>
 
-<title>Rare OS</title>
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Rare OS" />
 
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="style.css">
-</head>
+    <!-- Manifest and Stylesheets -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
 
-<body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="card">
+  <body>
+    <div id="app">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="logo">🧠 Rare OS</div>
+        <div class="top-icons">
+          <button id="notificationBtn" title="Enable Notifications">
+            🔔
+          </button>
+          <button id="settingsBtn" title="Settings">⚙️</button>
+        </div>
+      </header>
 
-<img id="avatar">
+      <!-- PROFILE -->
+      <section class="profile">
+        <div class="avatar">
+          <img
+            id="avatarImage"
+            src="https://i.pravatar.cc/200"
+            alt="User Avatar"
+          />
+        </div>
+        <div class="profile-info">
+          <h2 id="profileName">Welcome 👋</h2>
+          <p id="profileBio">Let's build your personal operating system.</p>
+          <button id="editProfile">Edit Profile</button>
+        </div>
+      </section>
 
-<h2 id="name"></h2>
+      <!-- QUICK ACTIONS -->
+      <section>
+        <h3>Quick Actions</h3>
+        <div class="quick-grid">
+          <button class="action" id="newProject" title="Create a new project">
+            📁
+            <span>Project</span>
+          </button>
+          <button class="action" id="newTask" title="Create a new task">
+            ✅
+            <span>Task</span>
+          </button>
+          <button class="action" id="newNote" title="Create a quick note">
+            📝
+            <span>Note</span>
+          </button>
+          <button class="action" id="newDevice" title="Add a new device">
+            📱
+            <span>Device</span>
+          </button>
+        </div>
+      </section>
 
-<p id="email"></p>
+      <!-- DASHBOARD -->
+      <section>
+        <h3>Dashboard</h3>
+        <div class="dashboard">
+          <div class="card health">
+            <div class="emoji">❤️</div>
+            <h4>Health</h4>
+            <p id="healthText">Healthy</p>
+          </div>
+          <div class="card">
+            <div class="emoji">🖨️</div>
+            <h4>Printer</h4>
+            <p>Offline</p>
+          </div>
+          <div class="card">
+            <div class="emoji">🚗</div>
+            <h4>Car</h4>
+            <p>Ready</p>
+          </div>
+          <div class="card">
+            <div class="emoji">📅</div>
+            <h4>Today</h4>
+            <p id="todayText">No Tasks</p>
+          </div>
+          <div class="card">
+            <div class="emoji">🤖</div>
+            <h4>AI</h4>
+            <p>Coming Soon</p>
+          </div>
+          <div class="card">
+            <div class="emoji">💻</div>
+            <h4>Devices</h4>
+            <p id="deviceCount">0 Connected</p>
+          </div>
+        </div>
+      </section>
 
-</div>
+      <!-- TIMELINE -->
+      <section>
+        <h3>Timeline</h3>
+        <div id="timeline">
+          <div class="timeline-item">👋 Welcome to Rare OS</div>
+        </div>
+      </section>
 
-<div class="grid">
+      <!-- DATABASE -->
+      <section>
+        <h3>Database</h3>
+        <div class="database">
+          <div>
+            Name
+            <span id="dbName">Unknown</span>
+          </div>
+          <div>
+            Projects
+            <span id="dbProjects">0</span>
+          </div>
+          <div>
+            Tasks
+            <span id="dbTasks">0</span>
+          </div>
+          <div>
+            Devices
+            <span id="dbDevices">0</span>
+          </div>
+        </div>
+      </section>
 
-<div class="widget">
+      <!-- FLOATING AI BUTTON -->
+      <button id="aiButton" title="AI Assistant">💬</button>
+    </div>
 
-Health
+    <!-- PROFILE MODAL -->
+    <div id="profileModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Create Profile</h2>
+        <input
+          id="inputName"
+          type="text"
+          placeholder="Name"
+          required
+          autocomplete="name"
+        />
+        <input
+          id="inputOccupation"
+          type="text"
+          placeholder="Occupation"
+          autocomplete="organization"
+        />
+        <textarea
+          id="inputBio"
+          placeholder="Bio"
+          rows="4"
+          autocomplete="off"
+        ></textarea>
+        <button id="saveProfile">Save Profile</button>
+      </div>
+    </div>
 
-<h1>82%</h1>
-
-</div>
-
-<div class="widget">
-
-Projects
-
-<h1>12</h1>
-
-</div>
-
-<div class="widget">
-
-Devices
-
-<h1>6</h1>
-
-</div>
-
-<div class="widget">
-
-Messages
-
-<h1>38</h1>
-
-</div>
-
-</div>
-
-<script src="app.js"></script>
-
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
