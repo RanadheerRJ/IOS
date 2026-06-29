@@ -1,8 +1,8 @@
 {
-"name":"Rare OS",
-"short_name":"Rare",
-"display":"standalone",
-"background_color":"#111111",
-"theme_color":"#111111",
-"start_url":"./"
+  "name": "Rare OS",
+  "short_name": "Rare",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "start_url": "./"
 }
